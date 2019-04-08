@@ -79,6 +79,14 @@ void commandMenuInit()
 	setCommand(4, FileName, OpenFile4, shKey(0x35), false);
 	::GetPrivateProfileString(sectionName, TEXT("favFile5"), TEXT(""), FileName, MAX_PATH, iniFilePath);
 	setCommand(5, FileName, OpenFile5, shKey(0x36), false);
+	::GetPrivateProfileString(sectionName, TEXT("favFile6"), TEXT(""), FileName, MAX_PATH, iniFilePath);
+	setCommand(6, FileName, OpenFile6, shKey(0x37), false);
+	::GetPrivateProfileString(sectionName, TEXT("favFile7"), TEXT(""), FileName, MAX_PATH, iniFilePath);
+	setCommand(7, FileName, OpenFile7, shKey(0x38), false);
+	::GetPrivateProfileString(sectionName, TEXT("favFile8"), TEXT(""), FileName, MAX_PATH, iniFilePath);
+	setCommand(8, FileName, OpenFile8, shKey(0x39), false);
+	::GetPrivateProfileString(sectionName, TEXT("favFile9"), TEXT(""), FileName, MAX_PATH, iniFilePath);
+	setCommand(9, FileName, OpenFile5, shKey(0x40), false);
 																			   
 	setCommand(nbFunc-2, TEXT("---"), NULL, NULL, false);
 	setCommand(nbFunc-1, TEXT("Manage Favorites"), ManageFavorites, shKey(0x42), false);	
@@ -103,6 +111,10 @@ void configFileInit()
 		::WritePrivateProfileString(sectionName, TEXT("favFile3"), TEXT(""), iniFilePath);
 		::WritePrivateProfileString(sectionName, TEXT("favFile4"), TEXT(""), iniFilePath);
 		::WritePrivateProfileString(sectionName, TEXT("favFile5"), TEXT(""), iniFilePath);	
+		::WritePrivateProfileString(sectionName, TEXT("favFile6"), TEXT(""), iniFilePath);
+		::WritePrivateProfileString(sectionName, TEXT("favFile7"), TEXT(""), iniFilePath);
+		::WritePrivateProfileString(sectionName, TEXT("favFile8"), TEXT(""), iniFilePath);
+		::WritePrivateProfileString(sectionName, TEXT("favFile9"), TEXT(""), iniFilePath);
 	}
 }
 
@@ -155,6 +167,10 @@ void OpenFile2() { OpenFavFile(TEXT("favFile2")); }
 void OpenFile3() { OpenFavFile(TEXT("favFile3")); }
 void OpenFile4() { OpenFavFile(TEXT("favFile4")); }
 void OpenFile5() { OpenFavFile(TEXT("favFile5")); }
+void OpenFile6() { OpenFavFile(TEXT("favFile6")); }
+void OpenFile7() { OpenFavFile(TEXT("favFile7")); }
+void OpenFile8() { OpenFavFile(TEXT("favFile8")); }
+void OpenFile9() { OpenFavFile(TEXT("favFile9")); }
 
 void OpenFavFile(TCHAR* keyName)
 {

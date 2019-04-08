@@ -39,6 +39,10 @@ void OpenFile2();
 void OpenFile3();
 void OpenFile4();
 void OpenFile5();
+void OpenFile6();
+void OpenFile7();
+void OpenFile8();
+void OpenFile9();
 
 void OpenFavFile(TCHAR* keyName);
 void ManageFavorites();
